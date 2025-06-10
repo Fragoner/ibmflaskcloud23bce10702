@@ -5,10 +5,10 @@ from cloudant.error import CloudantException
 app = Flask(__name__)
 
 # Cloudant credentials
-apikey = "7qEKFNMbEieTa60UJSUaj3alTC5GZF57F8_ebaPrJod6"
-url = "https://ac5fe05e-6e96-45ad-8e61-8e7b98f21dd5-bluemix.cloudantnosqldb.appdomain.cloud"
-username = "ac5fe05e-6e96-45ad-8e61-8e7b98f21dd5-bluemix"
-db_name = "feedbackcollector"
+apikey = "Add_APIKEY"
+url = "ADD_URL"
+username = "ADD_username"
+db_name = "ADD_DB-NAME"
 
 # Connect to Cloudant
 client = Cloudant.iam(username, apikey, url=url, connect=True)
