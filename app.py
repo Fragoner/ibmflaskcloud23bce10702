@@ -5,10 +5,10 @@ from cloudant.error import CloudantException
 app = Flask(__name__)
 
 # Cloudant credentials
-apikey = "Add_APIKEY"
-url = "ADD_URL"
-username = "ADD_username"
-db_name = "ADD_DB-NAME"
+apikey = "Itr6D7qSfbDaf61D6UcVo1CazicRKyTJEaEWaSrwOO51"
+url = "https://5e5233c0-a908-4aec-a5f0-b9634fe2ba69-bluemix.cloudantnosqldb.appdomain.cloud"
+username = "5e5233c0-a908-4aec-a5f0-b9634fe2ba69-bluemix"
+db_name = "feedbackdb"  # Replace with your actual database name
 
 # Connect to Cloudant
 client = Cloudant.iam(username, apikey, url=url, connect=True)
@@ -17,7 +17,7 @@ try:
 except CloudantException:
     db = client.create_database(db_name)
 
-# Serve static HTML directly from current folder
+# Serve static HTML
 @app.route('/')
 def index():
     return send_file("index.html")
